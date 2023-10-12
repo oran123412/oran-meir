@@ -61,7 +61,7 @@ To view the portfolio project on your local machine, follow these steps:
 Clone this repository to your computer using the following command:
 
 Copy code
-git clone https://github.com/oran123412/finalProject.git
+git clone https://github.com/oran123412/oran-meir
 Navigate to the project directory:
 
 
