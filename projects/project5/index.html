@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Heebo:wght@500&family=Varela&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            background: #E5EEFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-template-rows: repeat(7, auto);
+            gap: 10px;
+        }
+
+        .box {
+            background: #020253 0% 0% no-repeat padding-box;
+            opacity: 1;
+            grid-column: 3/5;
+            grid-row: 1/3;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box h2 {
+            text-align: center;
+            font: normal normal bold 61px/80px Assistant;
+            letter-spacing: 0px;
+            color: #0EE1DA;
+            opacity: 1;
+        }
+
+        .box p {
+            text-align: center;
+            font: normal normal 500 20px/26px Assistant;
+            letter-spacing: 0px;
+            color: #F9F9F9;
+            opacity: 1;
+            margin-bottom: 50px;
+        }
+
+        #image1 {
+            grid-column: 4/5;
+            grid-row: 6/7;
+        }
+
+        #image2 {
+            grid-column: 4/5;
+            grid-row: 3/4;
+        }
+
+        #image3 {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+
+        #image4 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+
+        #image5 {
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
+
+        #image6 {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        #image7 {
+            grid-column: 4/5;
+            grid-row: 5/6;
+        }
+
+        #image8 {
+            grid-column: 4/5;
+            grid-row: 4/5;
+        }
+
+        #image9 {
+            grid-column: 3/4;
+            grid-row: 4/5;
+        }
+
+        #image10 {
+            grid-column: 3/4;
+            grid-row: 5/6;
+        }
+
+        #image11 {
+            grid-column: 3/4;
+            grid-row: 6/7;
+        }
+
+        #image12 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        #image13 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        #image14 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        form {
+            background: #8E097C 0% 0% no-repeat padding-box;
+            opacity: 1;
+            grid-column: 1/3;
+            grid-row: 4/7;
+            height: 113vh;
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        form h1 {
+            text-align: center;
+            font: normal normal bold 35px/46px Assistant;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+
+        form p {
+            text-align: center;
+            font: normal normal normal 20px/26px Assistant;
+            letter-spacing: 0px;
+            color: #F9F9F9;
+            opacity: 1;
+        }
+
+        label {
+            text-align: right;
+            font: normal normal bold 16px/24px Heebo;
+            letter-spacing: 0px;
+            color: #0EE1DA;
+            opacity: 1;
+        }
+
+        form .input-container input {
+            background: #E5EEFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: none;
+            border-bottom: 4px solid #0EE1DA;
+            width: 30vw;
+            height: 7vh;
+        }
+
+        form .input-container .final-input {
+            height: 150px;
+        }
+
+        button {
+            background: #0EE1DA 0% 0% no-repeat padding-box;
+            opacity: 1;
+            text-align: center;
+            font: normal normal bold 24px/33px Heebo;
+            letter-spacing: 0.36px;
+            color: #011560;
+            opacity: 1;
+            width: 30vw;
+            border: none;
+            height: 7vh;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                margin: 0;
+                grid-template-columns: repeat(3, auto);
+                grid-template-rows: repeat(13, auto);
+                gap: 10px;
+            }
+
+            .box {
+                width: 100vw;
+                height: 30vh;
+                grid-column: 1/3;
+                grid-row: 1/3;
+                text-align: justify;
+            }
+
+            .box h2 {
+                margin-top: 25px;
+                width: 100vw;
+                height: 150vh;
+                font-size: 40px;
+            }
+
+            #image1 {
+                grid-column: 2/3;
+                grid-row: 13/14;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image2 {
+                grid-column: 2/3;
+                grid-row: 5/6;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image3 {
+                grid-column: 1/2;
+                grid-row: 6/7;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image4 {
+                grid-column: 2/3;
+                grid-row: 6/7;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image5 {
+                grid-column: 1/2;
+                grid-row: 5/6;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image6 {
+                grid-column: 2/3;
+                grid-row: 4/5;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image7 {
+                grid-column: 2/3;
+                grid-row: 12/13;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image8 {
+                grid-column: 2/3;
+                grid-row: 11/12;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image9 {
+                grid-column: 1/2;
+                grid-row: 11/12;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image10 {
+                grid-column: 1/2;
+                grid-row: 12/13;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image11 {
+                grid-column: 1/2;
+                grid-row: 13/14;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image12 {
+                grid-column: 2/3;
+                grid-row: 3/4;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image13 {
+                grid-column: 1/2;
+                grid-row: 3/4;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #image14 {
+                grid-column: 1/2;
+                grid-row: 4/5;
+                width: 50vw;
+                height: 25vh;
+            }
+
+            form {
+                grid-column: 1/3;
+                grid-row: 7/11;
+                width: 100vw;
+                height: 100vh;
+
+            }
+
+            form .input-container label {
+                font: normal normal bold 7px/10px Heebo;
+            }
+
+            form h1 {
+                font-size: 24px;
+                margin-top: -10px;
+
+            }
+
+            .final-input,
+            form .input-container input,
+            form p {
+                width: 80vw;
+                height: 7vh;
+                font-size: 20px;
+            }
+
+            button {
+                width: 80vw;
+                height: 7vh;
+                font-size: 12px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>לגלות את העולם</h2>
+        <p>העובדים איתנו מגלים עולם חדש ומקבלים טיול ליעד בחו"ל</p>
+    </div>
+
+    <img src="images/Rectangle 506.png" id="image1">
+    <img src="images/Rectangle 506-1.png" id="image2">
+    <img src="images/Rectangle 506-2.png" id="image3">
+    <img src="images/Rectangle 506-3.png" id="image4">
+    <img src="images/Rectangle 506-4.png" id="image5">
+    <img src="images/Rectangle 506-5.png" id="image6">
+    <img src="images/Rectangle 506-6.png" id="image7">
+    <img src="images/Rectangle 506-7.png" id="image8">
+    <img src="images/Rectangle 506-8.png" id="image9">
+    <img src="images/Rectangle 506-9.png" id="image10">
+    <img src="images/Rectangle 513.png" id="image11">
+    <img src="images/Rectangle 514.png" id="image12">
+    <img src="images/Rectangle 515.png" id="image13">
+    <img src="images/Rectangle 516.png" id="image14">
+
+    <form>
+        <h1>ספרו לנו על החוויה שלכם</h1>
+        <p>שתפו אותנו בחוויות שלכם ואולי תזכו בפרס</p>
+        <div class="input-container">
+            <label for="full name">שם מלא</label><br>
+            <input type="text"><br>
+            <label for="email">דוא"ל</label><br>
+            <input type="text"><br>
+            <label for="experience">החוויה שלכם</label><br>
+            <input type="text" class="final-input"><br><br>
+            <button>שליחה</button>
+        </div>
+    </form>
+
+
+</body>
+
+</html>
