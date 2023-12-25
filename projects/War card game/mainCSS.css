@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+img {
+  width: 100px;
+}
+:root {
+  --mainfont: Segoe UI;
+  --grey: #ccc;
+  --shadow: 5px 5px 8px #333;
+}
+
+html {
+  font-family: var(--mainfont);
+}
+
+body {
+  text-align: center;
+  background: rgb(15, 72, 2);
+}
+
+header {
+  margin: 0 0 50px 0;
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+  left: 608px;
+}
+
+.players {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.playertitle {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.score {
+  color: white;
+  font-weight: bold;
+}
+
+.score::before {
+  content: "Score: ";
+  font-weight: 400;
+}
+
+.winpointer {
+  color: RGB(255, 215, 0);
+  font-size: 140px;
+  margin-top: 120px;
+}
+
+.card {
+  margin: auto;
+  text-align: center;
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  width: 200px;
+  height: 320px;
+}
+.topcard {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.middlecard {
+  font-size: 6rem;
+  margin-top: 45px;
+}
+
+.resetbtn {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+
+#resetbtn {
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid wheat;
+  background-color: yellow;
+  padding: 5px 10px;
+}
+
+#resetbtn::after {
+  font-size: 1rem;
+  content: " start agian";
+}
+#resetbtn:hover {
+  border-color: #ecf803; /* Change border color on hover */
+  color: #333; /* Change text color on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 0); /* Add a subtle shadow on hover */
+}
+
+footer {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  color: white;
+  text-align: center;
+}
+
+#dealerturns::before {
+  content: "Dealer cards: ";
+}
+
+#userturns::before {
+  content: "User cards: ";
+}
+
+.bottomcard {
+  text-align: right;
+  margin: 60px 0 20px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+.card {
+  border: 2px solid #0077cc; /* Blue border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Add some padding to the card */
+  position: relative;
+  overflow: hidden; /* Hide overflow content outside the card */
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Width of the branch */
+  background-color: #0077cc; /* Blue color */
+}
+
+.card:before {
+  left: 0;
+}
+
+.card:after {
+  right: 0;
+}
+
+#mainbtn {
+  box-shadow: 0 0 5px cyan, 0 0 15px cyan;
+  font-family: var(--mainfont);
+  padding: 15px 20px;
+  font-weight: bold;
+}
+#mainbtn:hover {
+  box-shadow: 0 0 5px cyan, 0 0 5px cyan;
+}
+.score {
+  font-size: 40px;
+}

@@ -1,680 +1,774 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Heebo:wght@100;200;300;400;600;700;800;900&family=Satisfy&family=Varela&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<style>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Heebo:wght@100;200;300;400;600;700;800;900&family=Satisfy&family=Varela&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
-        scroll-behavior: smooth;
+      scroll-behavior: smooth;
     }
 
     p {
-        font: normal normal 500 20px/30px Heebo;
-        text-align: justify;
-        letter-spacing: 0px;
-        text-align: center;
+      font: normal normal 500 20px/30px Heebo;
+      text-align: justify;
+      letter-spacing: 0px;
+      text-align: center;
     }
 
     h2 {
-        text-align: center;
-        font: normal normal 900 35px/52px Heebo;
-        letter-spacing: 0px;
-        color: #3A3A3A;
-        opacity: 1;
+      text-align: center;
+      font: normal normal 900 40pt Heebo;
+      letter-spacing: 0px;
+      color: #3a3a3a;
+      opacity: 1;
     }
 
     .first-container {
-        border-top: #1AE0EC solid 4px;
-        border-bottom: #1AE0EC solid 4px;
-        background-color: #fff;
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        align-items: center;
-        width: 99vw;
-        height: 9vh;
+      border-top: #1ae0ec solid 4px;
+      border-bottom: #1ae0ec solid 4px;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      /* align-items: center; */
+      width: 99vw;
+      height: 9vh;
     }
 
     .first-container img {
-        align-items: flex-end;
-        width: 62px;
-        height: 60px;
-        border-radius: 40px;
-        position: relative;
-        left: 100px;
+      width: 4vw;
+      height: 8vh;
+      border-radius: 40px;
+      margin-left: 5vw;
     }
 
     .first-container p {
-        text-align: center;
-        margin-right: 460px;
-        margin-bottom: 90px;
-        font-family: Satisfy;
-        width: 500px;
-        direction: rtl;
+      font-family: Satisfy;
+      direction: ltr;
+      margin-right: 55vw;
+      margin-top: 1vw;
     }
 
     nav {
-        margin-right: 20px;
-        direction: rtl;
-        width: 600px;
+      direction: rtl;
+      /* width: 100vw; */
     }
 
     nav ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
     }
 
     nav ul li {
-        width: 200px;
-        font-size: 20pt;
+      font-size: 1.9vw;
+    }
+    .nav-container {
+      margin-top: 1vh;
     }
 
     .nav-container nav ul .blue-item {
-        color: #1AE0EC;
+      color: #1ae0ec;
     }
 
     .nav-container nav ul .blue-item a:visited {
-        color: #1AE0EC;
+      color: #1ae0ec;
     }
 
     .nav-container nav ul a:hover {
-        color: #1AE0EC;
-    }
-
-
-    .button-container button a {
-        text-decoration: none;
+      color: #1ae0ec;
     }
 
     a {
-        text-decoration: none;
+      text-decoration: none;
+    }
+
+    a {
+      color: #000000;
     }
 
     a:hover {
-        color: #1AE0EC;
+      color: #000000;
+      text-decoration: underline;
     }
 
     a:visited {
-        color: #2C2C2C;
+      color: #2c2c2c;
     }
 
     .card {
-        width: 30vw;
-        height: 100vh;
-        margin-right: 65rem;
+      width: 28vw;
+      height: auto;
+      margin-right: 1vw;
     }
 
-    .card-container .row .col-md-4 .card .logo {
-        width: 30vw;
-        height: 4vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 35px;
-    }
+    /* .card-container .row .col-4 .logo {
+       width: 30vw;
+       height: 4vh;
+       display: flex;
+       justify-content: center;
+       align-items: flex-start;
+       margin-top: 1vw;
+     } */
 
-
-    .card-container .row .col-md-4 .card button {
-        margin: auto;
+    .card-container .row .col-4 button {
+      margin: auto;
+      height: auto;
+      width: auto;
+      padding: 0px 10px;
+      margin-top: 5vw;
+      margin-bottom: 3vw;
     }
 
     .card p {
-        margin-top: -10px;
+      margin-top: -10px;
     }
 
-
     .card-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto auto auto;
-        height: 1700px;
-        background-color: #F6F6F6;
-        width: 99vw;
+      background-color: #f6f6f6;
     }
 
     .header-container {
-        background-image: url('images/bg.jpg');
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
+      background-image: url("images/bg.jpg");
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
     }
 
     .header-container h1 {
-        height: 10vh;
-        font: normal normal 900 80px/118px Heebo;
+      height: 10vh;
+      font: normal normal 900 60pt Heebo;
+      margin-bottom: 6vh;
     }
 
     .header-container p {
-        width: 70vw;
+      width: 70vw;
     }
 
     .images-container {
-        display: flex;
-        text-align: center;
-        flex-direction: row;
-        justify-content: center;
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      justify-content: center;
     }
 
     .main-photo {
-        display: block;
-        height: 150px;
-        width: 150px;
-        border-radius: 150px;
-        margin: 0 auto;
+      display: block;
+      height: 150px;
+      width: 150px;
+      border-radius: 150px;
+      margin: 0 auto;
     }
 
     .pargraph {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .pargraph p {
-        text-align: justify;
-        width: 50vw;
-        font: normal normal normal 20px/29px Heebo;
-        letter-spacing: 0px;
-        color: #3A3A3A;
-        opacity: 1;
+      text-align: justify;
+      width: 50vw;
+      font: normal normal normal 20px/29px Heebo;
+      letter-spacing: 0px;
+      color: #3a3a3a;
+      opacity: 1;
     }
 
     .button-resume {
-        text-align: right;
-        font: normal normal bold 20px/30px Heebo;
-        letter-spacing: 0.3px;
-        color: #3A3A3A;
-        opacity: 1;
-        background: #1AE0EC 0% 0% no-repeat padding-box;
-        border-radius: 25px;
-        opacity: 1;
-        display: block;
-        margin: auto;
-        width: 250px;
-        text-align: center;
-        border: none;
-        margin-bottom: 40px;
-        margin-top: 50px;
+      text-align: right;
+      font: normal normal bold 20px/30px Heebo;
+      letter-spacing: 0.3px;
+      color: #3a3a3a;
+      opacity: 1;
+      background: #1ae0ec 0% 0% no-repeat padding-box;
+      border-radius: 25px;
+      opacity: 1;
+      display: block;
+      margin: auto;
+      width: 250px;
+      text-align: center;
+      border: none;
+      margin-bottom: 40px;
+      margin-top: 50px;
     }
 
     .button-resume a {
-        color: #3A3A3A;
+      color: #3a3a3a;
     }
-
-
-    h2 {
-        text-align: center;
-        font: normal normal 900 36px/53px Heebo;
-        letter-spacing: 0px;
-        color: #3A3A3A;
-        opacity: 1;
-    }
-
 
     p {
-        text-align: center;
-        font: normal normal normal 20px/29px Heebo;
-        letter-spacing: 0px;
-        color: #3A3A3A;
-        opacity: 1;
-        margin-top: 100px;
+      text-align: center;
+      font: normal normal normal 12pt Heebo;
+      letter-spacing: 0px;
+      color: #3a3a3a;
+      opacity: 1;
     }
 
     button {
-        background: #1AE0EC 0% 0% no-repeat padding-box;
-        border-radius: 15px;
-        opacity: 1;
-        text-align: right;
-        font: normal normal 500 14px/26px Heebo;
-        letter-spacing: 0px;
-        color: #2C2C2C;
-        opacity: 1;
-        display: block;
-        width: 150px;
-        text-align: center;
-        border: none;
-        direction: rtl;
-        height: 30px;
-        align-items: center;
+      background: #1ae0ec 0% 0% no-repeat padding-box;
+      border-radius: 15px;
+      opacity: 1;
+      text-align: right;
+      font: normal normal 500 13pt Heebo;
+      letter-spacing: 0px;
+      color: #2c2c2c;
+      opacity: 1;
+      display: block;
+      width: 15vw;
+      text-align: center;
+      border: none;
+      direction: rtl;
+      height: 4vh;
+      align-items: center;
     }
 
     .form {
-        height: 100vh;
-        display: flex;
-        flex-direction: row;
-        background: #3A3A3A 0% 0% no-repeat padding-box;
-        opacity: 1;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      background: #3a3a3a 0% 0% no-repeat padding-box;
+      opacity: 1;
     }
 
     .form img {
-        margin-left: -200px;
+      margin-left: -13vw;
     }
 
     .form .all {
-        text-align: right;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        direction: rtl;
-        margin-left: 300px;
+      text-align: right;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      direction: rtl;
+      /* margin-left: 300px; */
     }
+    /* .logo > img {
+       width: 5vw !important;
+       height: 10vh;
+     } */
 
     .form .all h1 {
-        text-align: right;
-        font: normal normal 900 36px/53px Heebo;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-        opacity: 1;
+      text-align: right;
+      font: normal normal 900 36px/53px Heebo;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      margin-right: 10px;
     }
 
     .form .all p {
-        text-align: right;
-        font: normal normal normal 20px/29px Heebo;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-        opacity: 1;
+      text-align: right;
+      font: normal normal normal 20px/29px Heebo;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      margin-right: 10px;
     }
 
     .form .all .main-form label {
-        text-align: right;
-        font: normal normal bold 16px/24px Heebo;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-        opacity: 1;
+      text-align: right;
+      font: normal normal bold 16px/24px Heebo;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      margin-right: 10px;
     }
 
     .form .all .main-form input {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        opacity: 1;
-        border-bottom: 4px solid #1AE0EC;
-        width: 450px;
-        height: 40px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      opacity: 1;
+      border-bottom: 4px solid #1ae0ec;
+      width: 30vw;
+      height: 7vh;
+      margin-right: 10px;
     }
 
     .form .all .main-form button {
-        background: #1AE0EC 0% 0% no-repeat padding-box;
-        border-radius: 25px;
-        opacity: 1;
-        font: normal normal bold 22px/30px Heebo;
-        letter-spacing: 0.33px;
-        color: #2C2C2C;
-        opacity: 1;
-        width: 180px;
-        text-align: center;
-        height: 50px;
-        border: none;
-
+      background: #1ae0ec 0% 0% no-repeat padding-box;
+      border-radius: 25px;
+      opacity: 1;
+      font: normal normal bold 22px/30px Heebo;
+      letter-spacing: 0.33px;
+      color: #2c2c2c;
+      opacity: 1;
+      width: 15vw;
+      text-align: center;
+      height: 7vh;
+      border: none;
+      margin-right: 10px;
     }
 
     .form .all .main-form .final-input {
-        width: 450px;
-        height: 110px;
+      width: 30vw;
+      height: 15vh;
     }
 
     .footer {
-        background: #000000 0% 0% no-repeat padding-box;
-        font: normal normal 300 20px/29px Heebo;
-        color: #1AE0EC;
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        background: #1AE0EC 0% 0% no-repeat padding-box;
-        opacity: 1;
-        margin-top: 738px;
-        height: 25vh;
-        width: 99vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+      background: #000000 0% 0% no-repeat padding-box;
+      font: normal normal 300 20px/29px Heebo;
+      color: #1ae0ec;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      background: #1ae0ec 0% 0% no-repeat padding-box;
+      opacity: 1;
+      margin-top: 99vh;
+      height: 25vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
     }
 
     .footer img {
-        max-width: 100vw;
-        height: 50px;
+      max-width: 100vw;
+      height: 50px;
     }
 
     .footer p {
-        font-size: 12px;
-        color: black;
+      font-size: 12px;
+      color: black;
     }
 
     .footer .location {
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
     }
 
     .footer .location p {
-        position: relative;
-        left: 15px;
-        bottom: 80px;
+      position: relative;
+      left: 15px;
+      bottom: 80px;
     }
 
     .footer .email {
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
     }
 
     .footer .email p {
-        position: relative;
-        left: 35px;
-        bottom: 80px;
+      position: relative;
+      left: 35px;
+      bottom: 80px;
     }
 
     .footer .whatsapp {
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
     }
 
     .footer .simple-whatsapp {
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
     }
 
     .footer .simple-whatsapp p {
-        position: relative;
-        left: 10px;
-        bottom: 80px;
+      position: relative;
+      left: 10px;
+      bottom: 80px;
     }
 
     .footer .whatsapp p {
-        position: relative;
-        left: 16px;
-        bottom: 80px;
+      position: relative;
+      left: 16px;
+      bottom: 80px;
     }
 
     .footer .linkedin {
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
     }
 
     .footer .linkedin p {
-        position: relative;
-        left: 6px;
-        bottom: 80px;
+      position: relative;
+      left: 6px;
+      bottom: 80px;
     }
 
     .footer .facebook {
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
     }
 
     .footer .facebook p {
-        position: relative;
-        left: 12px;
-        bottom: 80px;
+      position: relative;
+      left: 12px;
+      bottom: 80px;
     }
 
     .black {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-end;
-        position: relative;
-        height: 5vh;
-        width: 99vw;
-        background-color: #000000;
-        top: 180px;
-        border-bottom: 5px solid #1AE0EC;
-        color: #1AE0EC;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      position: relative;
+      height: 5vh;
+      width: 99.5vw;
+      background-color: #000000;
+      top: 24vh;
+      border-bottom: 5px solid #1ae0ec;
+      color: #1ae0ec;
     }
 
     .black p {
-        font: normal normal 300 20px/29px Heebo;
-        letter-spacing: 0px;
-        color: #1AE0EC;
-        opacity: 1;
-        width: 99vw;
-        line-height: 0.1;
+      font: normal normal 300 20px/29px Heebo;
+      letter-spacing: 0px;
+      color: #1ae0ec;
+      opacity: 1;
+      width: 49vw;
+      line-height: 0.1;
     }
 
     .black p:first-child {
-        text-align: left;
+      text-align: left;
     }
 
     .black p:last-child {
-        text-align: right;
+      text-align: right;
     }
-</style>
+    @media (max-width: 900px) {
+      .first-container p {
+        margin-right: 45vw;
+      }
+      .first-container img {
+        width: 5.5vw;
+      }
+      .card-container .row .col-4 img[src="images/5.png"] {
+        height: 19vh !important;
+      }
+      /* .card-container .row .col-4 .logo {
+         height: 7vh;
+       } */
+      .card-container .row .col-4:nth-child(6) h2 {
+        margin-top: 2vw;
+      }
+      .card-container .row .col-4:nth-child(4) button {
+        margin-top: 4vw;
+      }
+      /* .row.g-3 .card:nth-child(1) .logo {
+         margin-top: 4.5vw;
+       } */
+      .nav-container,
+      .first-container p {
+        margin-top: 2vh;
+      }
+      .card-container .row .col-4 button {
+        margin-top: auto;
+      }
+      .header-container h1 {
+        font: normal normal 900 40pt Heebo;
+        margin-bottom: 4vh;
+      }
+      h2 {
+        text-align: center;
+        font: normal normal 900 12pt Heebo;
+        letter-spacing: 0px;
+        color: #3a3a3a;
+        opacity: 1;
+      }
+      button {
+        font: normal normal 500 11pt Heebo;
+      }
+    }
+    @media (max-width: 600px) {
+      .card-container .row .col-4:nth-child(4) button {
+        margin-top: 25vw;
+      }
+    }
+  </style>
 
-<body>
+  <body>
     <div class="first-container">
-        <img src="images/profilePicture.jpeg">
-        <p>Oran Meir</p>
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li class="blue-item"><a href="portfolio.html">ראשי</a></li>
-                    <li><a href="portfolio.html#about">אודות</a></li>
-                    <li><a href="portfolio.html#services">שירותים</a></li>
-                    <li><a href="portfolio.html#contact-us">צור קשר</a></li>
-                </ul>
-            </nav>
-        </div>
+      <img src="images/profilePicture.jpeg" />
+      <p>Oran Meir</p>
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li class="blue-item mr-1"><a href="portfolio.html">ראשי</a></li>
+            <li style="margin-right: 1rem">
+              <a href="portfolio.html#about">אודות</a>
+            </li>
+            <li style="margin-right: 1rem">
+              <a href="portfolio.html#services">שירותים</a>
+            </li>
+            <li style="margin-right: 1rem">
+              <a href="portfolio.html#contact-us">צור קשר</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <div class="header-container">
-        <h1>תיק עבודות</h1>
-        <p>תיק העבודת מציג בפניכם פרטים עלי, מגוון פרוייקטים עדכניים ביותר, כל פרוייקט הוא הדגמה קטנה ליכולת לבצע
-            פרוייקטים עתידיים מורכבים שיענו על כל הדרישות , ולמטה דרכים ליצירת קשר
-        </p>
+      <h1>תיק עבודות</h1>
+      <p>
+        תיק העבודת מציג בפניכם פרטים עלי, מגוון פרוייקטים עדכניים ביותר, כל
+        פרוייקט הוא הדגמה קטנה ליכולת לבצע פרוייקטים עתידיים מורכבים שיענו על כל
+        הדרישות , ולמטה דרכים ליצירת קשר
+      </p>
     </div>
     <div class="images-container">
-        <div class="grid-item"><img src="images/img-HTML.png"></div>
-        <div class="grid-item"><img src="images/img-CSS.png"></div>
-        <div class="grid-item"><img src="images/img-Bootstrap.png"></div>
-        <div class="grid-item"><img src="images/img-SASS.png"></div>
+      <div><img src="images/img-HTML.png" /></div>
+      <div><img src="images/img-CSS.png" /></div>
+      <div><img src="images/img-Bootstrap.png" /></div>
+      <div><img src="images/img-SASS.png" /></div>
     </div>
     <div id="about">
-        <img src="images/file.jpg" class="main-photo">
-        <h2>קצת עלי</h2>
-        <div class="pargraph">
-            <p dir="rtl">שמי אורן מאיר ואני מתמחה בבניית אתרים באמצעות שפות כמו HTML, CSS, Bootstrap ו-Sass.
-                העבודה במקצוע שאתה אוהב נחשבת בעיני לשליחות, ואני מוצא תשוקה גדולה לנושא בניית האתרים.
-                החלום שלי הוא לקחת חלק משמעותי בחברה גדולה שעוסקת בנושא, ולשם כך אני מוכן להתמסר ללמוד ולהשקיע המון זמן
-                וכוחות.
-                אחת התכונות שלי היא התמדה, אני לא אפסיק עד שהמטרה שאותה הצבתי לעצמי תושג על הצד הטוב ביותר.
-                תוך יחס מכבד לבני אדם בקבוצה בה אני עובד.
-                יחס מכבד ועבודה קשה הן התכונות שעל פיהם אני חי
-            </p>
-        </div>
-        <button class="button-resume"><a href="קורות חיים 2.docx" download>קורות חיים</a></button>
+      <img src="images/file.jpg" class="main-photo" />
+      <h2>קצת עלי</h2>
+      <div class="pargraph">
+        <p dir="rtl">
+          שמי אורן מאיר ואני מתמחה בבניית אתרים באמצעות שפות כמו HTML, CSS,
+          Bootstrap ו-Sass. העבודה במקצוע שאתה אוהב נחשבת בעיני לשליחות, ואני
+          מוצא תשוקה גדולה לנושא בניית האתרים. החלום שלי הוא לקחת חלק משמעותי
+          בחברה גדולה שעוסקת בנושא, ולשם כך אני מוכן להתמסר ללמוד ולהשקיע המון
+          זמן וכוחות. אחת התכונות שלי היא התמדה, אני לא אפסיק עד שהמטרה שאותה
+          הצבתי לעצמי תושג על הצד הטוב ביותר. תוך יחס מכבד לבני אדם בקבוצה בה
+          אני עובד. יחס מכבד ועבודה קשה הן התכונות שעל פיהם אני חי
+        </p>
+      </div>
+      <button class="button-resume">
+        <a href="קורות חיים 2.docx" download>קורות חיים</a>
+      </button>
     </div>
     <div id="services">
-        <div class="card-container">
-            <h2>עבודות נבחרות</h2>
-            <p style="position: relative;right: 1135px;width: 50vw;">
-                תצוגה של כל סוגי העבודות העדכניות שלנו</p>
-            <br>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/1.jpg">
-                        <h2>תן לנו להוביל אותך קדימה</h2>
-                        <p>השאירו פרטים ונחזור בהקדם</p>
-                        <div class="logo">
-                            <img src="images/img-HTML.png">
-                            <img src="images/img-CSS.png">
-                            <img src="images/img-Bootstrap.png">
-                            <img src="images/img-SASS.png">
-                        </div>
-                        <button><a href="projects/project1/projectPage.html">לעמוד הפרוייקט >></a></button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/2.jpg">
-                        <h2>Here&Now</h2>
-                        <p>מילוי פרטים על מנת לקבל שלל מתנות</p>
-                        <div class="logo">
-                            <img src="images/img-HTML.png">
-                            <img src="images/img-CSS.png">
-                            <img src="images/img-Bootstrap.png">
-                            <img src="images/img-SASS.png">
-                        </div>
-                        <button><a href="projects/project2/projectPage.html">לעמוד הפרוייקט >></a></button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/3.jpg">
-                        <h2>קפה טוב לבוקר טוב</h2>
-                        <p>מילוי פרטים לקבלת קופון קפה חינם</p>
-                        <div class="logo">
-                            <img src="images/img-HTML.png">
-                            <img src="images/img-CSS.png">
-                            <img src="images/img-Bootstrap.png">
-                            <img src="images/img-SASS.png">
-                        </div>
-                        <button><a href="projects/project3/projectPage.html">לעמוד הפרוייקט >></a></button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/4.png">
-                        <h2>תן לנו להוביל אותך קדימה</h2>
-                        <p>מילוי פרטים על מנת לחזור אליך</p>
-                        <div class="logo">
-                            <img src="images/img-HTML.png">
-                            <img src="images/img-CSS.png">
-                            <img src="images/img-Bootstrap.png">
-                            <img src="images/img-SASS.png">
-                        </div>
-                        <button><a href="projects/project4/projectPage.html">לעמוד הפרוייקט >></a></button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/5.png">
-                        <h2>לגלות את העולם</h2>
-                        <p>בדף זה ניתן לספר לנו מה הייתה החוויה שלך</p>
-                        <div class="logo" style="height: 1px;">
-                            <img src="images/img-HTML.png">
-                            <img src="images/img-CSS.png">
-                            <img src="images/img-Bootstrap.png">
-                            <img src="images/img-SASS.png">
-                        </div>
-                        <button style="margin-top: 120px;"><a href="projects/project5/projectPage.html">לעמוד הפרוייקט
-                                >></a></button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/6.png">
-                        <h2>ייעוץ חינם</h2>
-                        <p>בדף זה ניתן לפנות אלינו לייעוץ חינם</p>
-                        <div class="logo">
-                            <img src="images/img-HTML.png">
-                            <img src="images/img-CSS.png">
-                            <img src="images/img-Bootstrap.png">
-                            <img src="images/img-SASS.png">
-                        </div>
-                        <button><a href="projects/project6/projectPage.html">לעמוד הפרוייקט >></a></button>
-                    </div>
-                </div>
+      <div class="card-container">
+        <h2>עבודות נבחרות</h2>
+        <p>תצוגה של כל סוגי העבודות העדכניות שלנו</p>
+        <br />
+        <div class="row g-3 d-flex justify-content-center">
+          <div class="col-4 card mr-4">
+            <img src="images/1.jpg" />
+            <hr />
+            <h2>תן לנו להוביל אותך קדימה</h2>
+            <p>השאירו פרטים ונחזור בהקדם</p>
+            <button>
+              <a href="projects/project1/projectPage.html"> לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/2.jpg" />
+            <hr />
+            <h2>Here&Now</h2>
+            <p>מילוי פרטים על מנת לקבל שלל מתנות</p>
+            <button>
+              <a href="projects/project2/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/3.jpg" />
+            <hr />
+            <h2>קפה טוב לבוקר טוב</h2>
+            <p>מילוי פרטים לקבלת קופון קפה חינם</p>
+            <button>
+              <a href="projects/project3/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/4.png" />
+            <hr />
+            <h2>תן לנו להוביל אותך קדימה</h2>
+            <p>מילוי פרטים על מנת לחזור אליך</p>
+            <button>
+              <a href="projects/project4/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img style="height: 35vh" src="images/5.png" />
+            <hr />
+            <h2>לגלות את העולם</h2>
+            <p>בדף זה ניתן לספר לנו מה הייתה החוויה שלך</p>
+            <button>
+              <a href="projects/project5/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/6.png" />
+            <hr />
+            <h2>ייעוץ חינם</h2>
+            <p>בדף זה ניתן לפנות אלינו לייעוץ חינם</p>
+            <button>
+              <a href="projects/project6/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/countries.png" />
+            <hr />
+            <h2>Countries</h2>
+            <p>חיפוש כל מדינה בעולם</p>
+            <button>
+              <a href="projects/Countries/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/manageU.png" />
+            <hr />
+            <h2>Todo list</h2>
+            <p>רשימת מטלות</p>
+            <button>
+              <a href="projects/ManageU/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/Myaccount2.png" />
+            <hr />
+            <h2>My account</h2>
+            <p>חישוב הוצאות והכנסות</p>
+            <button>
+              <a href="projects/MyAccount/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/snake.png" />
+            <hr />
+            <h2>Snake</h2>
+            <p>המשחק סנייק</p>
+            <button>
+              <a href="projects/Snake/projectPage.html">לעמוד הפרוייקט </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/sudoku.png" />
+            <hr />
+            <h2>סודוקו</h2>
+            <p>המשחק סודוקו</p>
+            <button>
+              <a href="projects/Sudoku/Sudoku2/projectPage.html"
+                >לעמוד הפרוייקט
+              </a>
+            </button>
+          </div>
+          <div class="col-4 card">
+            <img src="images/cardsWar.png" />
+            <hr />
+            <h2>מלחמה</h2>
+            <p>המשחק מלחמה</p>
+            <button>
+              <a href="projects/War card game/projectPage.html"
+                >לעמוד הפרוייקט
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="contact-us">
+        <div class="form">
+          <img src="images/Rectangle 41.png" style="width: 45vw" />
+          <div class="all">
+            <h1>צור קשר</h1>
+            <p style="margin-top: 0">
+              צור איתנו קשר לעבודה מהירה וטובה ללא תקלות
+            </p>
+            <form class="main-form">
+              <label for="full name">שם מלא</label><br />
+              <input type="text" required /><br /><br />
+              <label for="email">דוא"ל</label><br />
+              <input type="text" required /><br /><br />
+              <label for="phone">טלפון</label><br />
+              <input type="text" required /><br /><br />
+              <label for="experience">תוכן ההודעה</label><br />
+              <input
+                type="text"
+                class="final-input"
+                required
+              /><br /><br /><br />
+              <button>שליחה</button>
+              <br />
+              <br />
+              <br />
+            </form>
+          </div>
+          <div class="footer">
+            <div class="location">
+              <img src="images/Icon material-location-on.png" />
+              <p style="margin-top: 12vh">שנקין 5 ת"א</p>
             </div>
-        </div>
-        <div id="contact-us">
-            <div class="form">
-                <img src="images/Rectangle 41.png">
-                <div class="all">
-                    <h1>צור קשר</h1>
-                    <p>צור איתנו קשר לעבודה מהירה וטובה ללא תקלות</p>
-                    <form class="main-form">
-                        <label for="full name">שם מלא</label><br>
-                        <input type="text"><br><br>
-                        <label for="email">דוא"ל</label><br>
-                        <input type="text"><br><br>
-                        <label for="phone">טלפון</label><br>
-                        <input type="text"><br><br>
-                        <label for="experience">תוכן ההודעה</label><br>
-                        <input type="text" class="final-input"><br><br>
-                        <button>שליחה</button>
-                        <br>
-                        <br>
-                        <br>
-                    </form>
-                </div>
-                <div class="footer">
-                    <div class="location">
-                        <img src="images/Icon material-location-on.png">
-                        <p>שנקין 5 ת"א</p>
-                    </div>
-                    <div class="email">
-                        <img src="images/Icon simple-email.png">
-                        <p>oranmeir1@gmail.com</p>
-                    </div>
-                    <div class="whatsapp">
-                        <img src="images/Icon simple-whatsapp3.svg">
-                        <p>+972506468605</p>
-                    </div>
-                    <div class="simple-whatsapp">
-                        <img src="images/Icon simple-whatsapp.png">
-                        <p>0506468605</p>
-                    </div>
-                    <div class="linkedin">
-                        <img src="images/Icon awesome-linkedin-in.png">
-                        <p>Oran Meir</p>
-                    </div>
-                    <div class="facebook">
-                        <img src="images/Icon awesome-facebook-f.png">
-                        <p>Oran Meir</p>
-                    </div>
-                </div>
+            <div class="email">
+              <img
+                style="margin-right: 1.5vw"
+                src="images/Icon simple-email.png"
+              />
+              <p style="margin-top: 12vh; margin-right: 1vw">
+                oranmeir1@gmail.com
+              </p>
             </div>
+            <div class="whatsapp">
+              <img src="images/Icon simple-whatsapp3.svg" />
+              <p style="margin-top: 12vh">+972506468605</p>
+            </div>
+            <div class="simple-whatsapp">
+              <img src="images/Icon simple-whatsapp.png" />
+              <p style="margin-top: 12vh">0506468605</p>
+            </div>
+            <div class="linkedin">
+              <img src="images/Icon awesome-linkedin-in.png" />
+              <p style="margin-top: 12vh">Oran Meir</p>
+            </div>
+            <div class="facebook">
+              <img src="images/Icon awesome-facebook-f.png" />
+              <p style="margin-top: 12vh">Oran Meir</p>
+            </div>
+          </div>
         </div>
-        <div class="black">
-            <p dir="ltr">Oran Meir</p>
-            <p dir="rtl">כל הזכויות שמורות</p>
-        </div>
+      </div>
+      <div class="black">
+        <p dir="ltr">Oran Meir</p>
+        <p dir="rtl">כל הזכויות שמורות</p>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

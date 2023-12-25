@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      body {
+        background-color: #06026f;
+      }
+
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 0;
+      }
+
+      #container {
+        width: 50vw;
+        margin: 0 auto;
+        background-color: #fff;
+      }
+
+      .btn-custom {
+        margin-top: 3px !important;
+      }
+      @media (max-width: 900px) {
+        body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+        }
+
+        #container {
+          width: 70vw;
+        }
+        /* #container input {
+          width: 30vw;
+        } */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+    <div id="container" class="border border-dark">
+      <h1 class="bg-secondary text-center text-white">
+        MANAGE-U <i class="fa-solid fa-arrow-trend-up text-warning"></i>
+      </h1>
+      <div class="form-floating my-3">
+        <div class="row">
+          <div class="col-7 offset-2">
+            <input
+              type="text"
+              class="form-control"
+              id="new-task"
+              placeholder="New task"
+            />
+            <label for="description"></label>
+          </div>
+          <div class="col-2">
+            <button
+              type="button"
+              class="btn btn-warning btn-sm mt-3 btn-custom"
+              onclick="addTaskToManager()"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-center text-success mt-4">Active</h2>
+      <div class="form-floating mb-3">
+        <ul id="list" class="list-group list-unstyled text-center"></ul>
+        <h2 class="text-center text-danger mt-5">Completed</h2>
+        <ul
+          id="completedList"
+          class="list-group list-unstyled text-decoration-line-through text-center"
+        ></ul>
+      </div>
+      <script src="scripts.js" type="module" defer></script>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+      <script>
+        particlesJS("particles-js", {
+          particles: {
+            number: {
+              value: 80,
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+            },
+            color: {
+              value: "#ffffff",
+            },
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000",
+              },
+              polygon: {
+                nb_sides: 5,
+              },
+              image: {
+                src: "img/github.svg",
+                width: 100,
+                height: 100,
+              },
+            },
+            opacity: {
+              value: 0.5,
+              random: false,
+              anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false,
+              },
+            },
+            size: {
+              value: 3,
+              random: true,
+              anim: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false,
+              },
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200,
+              },
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse",
+              },
+              onclick: {
+                enable: true,
+                mode: "push",
+              },
+              resize: true,
+            },
+            modes: {
+              grab: {
+                distance: 400,
+                line_linked: {
+                  opacity: 1,
+                },
+              },
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+              push: {
+                particles_nb: 4,
+              },
+              remove: {
+                particles_nb: 2,
+              },
+            },
+          },
+          retina_detect: true,
+        });
+      </script>
+    </div>
+  </body>
+</html>

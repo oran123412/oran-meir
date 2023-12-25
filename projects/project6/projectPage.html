@@ -1,225 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Heebo:wght@100;200;300;400;600;700;800;900&family=Satisfy&family=Varela&display=swap"
-        rel="stylesheet">
-</head>
-<style>
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Heebo:wght@100;200;300;400;600;700;800;900&family=Satisfy&family=Varela&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     .top-line {
-        background: #1AE0EC 0% 0% no-repeat padding-box;
-        opacity: 1;
-        height: 4px;
+      background: #1ae0ec 0% 0% no-repeat padding-box;
+      opacity: 1;
+      height: 4px;
     }
 
     .first-container img {
-        width: 62px;
-        height: 60px;
-        border-radius: 40px;
+      width: 62px;
+      height: 60px;
+      border-radius: 40px;
     }
 
     .first-container {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: center;
-        margin-left: 150px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 150px;
     }
 
     .first-container p {
-        margin-right: 500px;
-        font-family: Satisfy;
-        width: 500px;
-        direction: rtl;
+      margin-right: 500px;
+      font-family: Satisfy;
+      width: 500px;
+      direction: rtl;
     }
 
     .nav-container nav ul .blue-item {
-        color: #1AE0EC;
+      color: #1ae0ec;
     }
 
     .nav-container nav ul .blue-item a:visited {
-        color: #1AE0EC;
+      color: #1ae0ec;
     }
 
     .nav-container nav ul a:hover {
-        color: #1AE0EC;
+      color: #1ae0ec;
     }
 
     nav {
-        margin-right: 20px;
-        direction: rtl;
-        width: 600px;
+      margin-right: 20px;
+      direction: rtl;
+      width: 600px;
     }
 
-
     nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
 
     nav ul li {
-        width: 200px;
-        font-size: 20pt;
+      width: 200px;
+      font-size: 20pt;
     }
 
     a {
-        text-decoration: none;
+      text-decoration: none;
     }
 
     a:hover {
-        color: #1AE0EC;
+      color: #1ae0ec;
     }
 
     a:visited {
-        color: #2C2C2C;
+      color: #2c2c2c;
     }
 
     .header-container {
-        background-image: url('images/bg.jpg');
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        text-align: center;
+      background-image: url("images/bg.jpg");
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      text-align: center;
     }
 
     h1 {
-        font: normal normal 900 80px/118px Heebo;
-        text-align: center;
-
+      font: normal normal 900 80px/118px Heebo;
+      text-align: center;
     }
 
     p {
-        font: normal normal 500 20px/30px Heebo;
-        text-align: justify;
-        letter-spacing: 0px;
-        text-align: center;
+      font: normal normal 500 20px/30px Heebo;
+      text-align: justify;
+      letter-spacing: 0px;
+      text-align: center;
     }
 
     .button-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-        direction: rtl;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      direction: rtl;
     }
 
     .button-container button {
-        background: #1AE0EC;
-        border-radius: 15px;
-        opacity: 1;
-        width: 160px;
-        height: 30px;
-        margin: 10px 10px 10px 10px;
-        font: normal normal 500 14px/26px Heebo;
-        border: none;
-        font-weight: bold;
+      background: #1ae0ec;
+      border-radius: 15px;
+      opacity: 1;
+      width: 160px;
+      height: 30px;
+      margin: 10px 10px 10px 10px;
+      font: normal normal 500 14px/26px Heebo;
+      border: none;
+      font-weight: bold;
     }
 
     .button-container button a {
-        text-decoration: none;
-        color: #000000;
+      text-decoration: none;
+      color: #000000;
     }
 
     .images-container {
-        display: flex;
-        text-align: center;
-        flex-direction: row;
-        justify-content: center;
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      justify-content: center;
     }
 
     .body-container {
-        height: 100vh;
-        width: 100vw;
-        background-color: #EBFEFF;
+      height: 100vh;
+      width: 100vw;
+      background-color: #ebfeff;
     }
 
     .picture-container {
-        background-position: center top;
-        background-image: url('images/6.png');
-        height: 85vh;
-        width: 80vw;
-        background-size: cover;
-        background-position: center;
-        margin: 0 auto;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      background-position: center top;
+      background-image: url("images/6.png");
+      height: 85vh;
+      width: 80vw;
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     }
 
     .footer {
-        width: 98vw;
-        height: 5vh;
-        background: #000000 0% 0% no-repeat padding-box;
-        border-bottom: 5px solid #1AE0EC;
+      width: 98vw;
+      height: 5vh;
+      background: #000000 0% 0% no-repeat padding-box;
+      border-bottom: 5px solid #1ae0ec;
     }
 
     .footer p {
-        text-align: left;
-        font: normal normal 300 20px/29px Heebo;
-        letter-spacing: 0px;
-        color: #1AE0EC;
-        opacity: 1;
+      text-align: left;
+      font: normal normal 300 20px/29px Heebo;
+      letter-spacing: 0px;
+      color: #1ae0ec;
+      opacity: 1;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <div class="top-line"></div>
-    <div class=" first-container">
-        <img src="images/profilePicture.jpeg">
-        <p>Oran Meir</p>
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li class="blue-item"><a href="/oran meir/portfolio.html">ראשי</a></li>
-                    <li><a href="/oran meir/portfolio.html#about">אודות</a></li>
-                    <li><a href="/oran meir/portfolio.html#services">שירותים</a></li>
-                    <li><a href="/oran meir/portfolio.html#contact-us">צור קשר</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="first-container">
+      <img src="images/profilePicture.jpeg" />
+      <p>Oran Meir</p>
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li class="blue-item">
+              <a href="../../portfolio.html">ראשי</a>
+            </li>
+            <li><a href="../../portfolio.html#about">אודות</a></li>
+            <li><a href="../../portfolio.html#services">שירותים</a></li>
+            <li><a href="../../portfolio.html#contact-us">צור קשר</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <div class="header-container">
-        <h1>ייעוץ חינם</h1>
-        <p>השאירו פרטים וקבלו יעוץ והכוונה חינמית ממומחה בתחום</p>
-        <div class="button-container">
-            <button>
-                <a href="index.html">
-                    לצפייה בפרויקט >> </a></button>
-            <button>
-                <a href="index.zip" download="index.zip"> להורדת הפרויקט>> </a></button>
-        </div>
+      <h1>ייעוץ חינם</h1>
+      <p>השאירו פרטים וקבלו יעוץ והכוונה חינמית ממומחה בתחום</p>
+      <div class="button-container">
+        <button>
+          <a href="index.html"> לצפייה בפרויקט >> </a>
+        </button>
+        <button>
+          <a href="index.zip" download="index.zip"> להורדת הפרויקט>> </a>
+        </button>
+      </div>
     </div>
     <div class="images-container">
-        <div class="grid-item"><img src="images/img-HTML.png"></div>
-        <div class="grid-item"><img src="images/img-CSS.png"></div>
-        <div class="grid-item"><img src="images/img-Bootstrap.png"></div>
-        <div class="grid-item"><img src="images/img-SASS.png"></div>
+      <div class="grid-item"><img src="images/img-HTML.png" /></div>
+      <div class="grid-item"><img src="images/img-CSS.png" /></div>
+      <div class="grid-item"><img src="images/img-Bootstrap.png" /></div>
+      <div class="grid-item"><img src="images/img-SASS.png" /></div>
     </div>
     <div class="body-container">
-        <div class="picture-container">
-        </div>
+      <div class="picture-container"></div>
     </div>
     <div class="footer">
-        <p style="float: left; line-height: 1.5;">Oran Meir</p>
-        <p style="float: right; line-height: 1.5;">כל הזכויות שמורות</p>
-        <div style="clear: both;"></div>
+      <p style="float: left; line-height: 1.5">Oran Meir</p>
+      <p style="float: right; line-height: 1.5">כל הזכויות שמורות</p>
+      <div style="clear: both"></div>
     </div>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+    <!-- title -->
+    <title>Card War Game</title>
+
+    <!-- js -->
+    <script src="mainJS.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="mainCSS.css" />
+  </head>
+
+  <body>
+    <img src="poker-cards.png" alt="poker-cards" />
+    <section class="players">
+      <header>Card War Game</header>
+
+      <div class="centercard">
+        <div class="playertitle">Dealer</div>
+        <br />
+        <div class="card">
+          <div class="topcard">
+            <label class="cardnum" id="dealercardnum"></label>
+            <label class="char" id="dealerchar"></label>
+          </div>
+          <div class="middlecard">
+            <label id="dealerbigchar" class="bigchar"></label>
+          </div>
+          <div class="bottomcard">
+            <label class="bottomnum" id="dealerbottomnum"></label>
+            <label class="bottomChar" id="dealerBottomChar"></label>
+          </div>
+        </div>
+        <br />
+        <div class="score" id="dealerscore"></div>
+      </div>
+
+      <div class="winpointer">
+        <div class="pointer" id="pointer"></div>
+      </div>
+
+      <div class="centercard">
+        <div class="playertitle">User</div>
+        <br />
+
+        <div class="card">
+          <div class="topcard">
+            <label class="cardnum" id="usercardnum"></label>
+            <label class="char" id="userchar"></label>
+          </div>
+          <div class="middlecard">
+            <label id="userbigchar" class="bigchar"></label>
+          </div>
+          <div class="bottomcard">
+            <label class="bottomnum" id="userbottomnum"></label>
+            <label class="bottomChar" id="userBottomChar"></label>
+          </div>
+        </div>
+        <br />
+        <div class="score" id="userscore"></div>
+      </div>
+      <div></div>
+    </section>
+
+    <br /><br /><br />
+    <input type="button" value="Go !" id="mainbtn" onclick="lotocards();" />
+    <div class="resetbtn">
+      <a id="resetbtn" onclick="location.reload();"></a>
+    </div>
+
+    <footer>
+      <div></div>
+      <div class="turns" id="dealerturns"></div>
+      <div></div>
+      <div class="turns" id="userturns"></div>
+      <div></div>
+    </footer>
+  </body>
+</html>
