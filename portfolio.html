@@ -58,8 +58,7 @@
       z-index: 1;
       display: flex;
       justify-content: space-between;
-      /* align-items: center; */
-      width: 99vw;
+      width: 100vw;
       height: 9vh;
     }
 
@@ -67,7 +66,7 @@
       width: 4vw;
       height: 8vh;
       border-radius: 40px;
-      margin-left: 5vw;
+      margin-left: 2vw;
     }
 
     .first-container p {
@@ -79,7 +78,6 @@
 
     nav {
       direction: rtl;
-      /* width: 100vw; */
     }
 
     nav ul {
@@ -128,16 +126,11 @@
       width: 28vw;
       height: auto;
       margin-right: 1vw;
+      transition: transform 0.3s ease-in-out;
     }
-
-    /* .card-container .row .col-4 .logo {
-       width: 30vw;
-       height: 4vh;
-       display: flex;
-       justify-content: center;
-       align-items: flex-start;
-       margin-top: 1vw;
-     } */
+    .card:hover {
+      transform: scale(1.05);
+    }
 
     .card-container .row .col-4 button {
       margin: auto;
@@ -157,7 +150,7 @@
     }
 
     .header-container {
-      background-image: url("images/bg.jpg");
+      background-image: url("images/R.jpeg");
       height: 50vh;
       display: flex;
       flex-direction: column;
@@ -170,10 +163,7 @@
       height: 10vh;
       font: normal normal 900 60pt Heebo;
       margin-bottom: 6vh;
-    }
-
-    .header-container p {
-      width: 70vw;
+      color: rgb(255, 217, 0);
     }
 
     .images-container {
@@ -276,12 +266,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       direction: rtl;
-      /* margin-left: 300px; */
     }
-    /* .logo > img {
-       width: 5vw !important;
-       height: 10vh;
-     } */
 
     .form .all h1 {
       text-align: right;
@@ -363,7 +348,7 @@
     }
 
     .footer p {
-      font-size: 12px;
+      font-size: 1vw;
       color: black;
     }
 
@@ -377,7 +362,7 @@
 
     .footer .location p {
       position: relative;
-      left: 15px;
+      left: 47px;
       bottom: 80px;
     }
 
@@ -413,7 +398,7 @@
 
     .footer .simple-whatsapp p {
       position: relative;
-      left: 10px;
+      left: 30px;
       bottom: 80px;
     }
 
@@ -447,7 +432,7 @@
 
     .footer .facebook p {
       position: relative;
-      left: 12px;
+      left: 30px;
       bottom: 80px;
     }
 
@@ -482,8 +467,11 @@
       text-align: right;
     }
     @media (max-width: 900px) {
+      li.blue-item {
+        margin-right: 0;
+      }
       .first-container p {
-        margin-right: 45vw;
+        margin-right: 50vw;
       }
       .first-container img {
         width: 5.5vw;
@@ -491,18 +479,14 @@
       .card-container .row .col-4 img[src="images/5.png"] {
         height: 19vh !important;
       }
-      /* .card-container .row .col-4 .logo {
-         height: 7vh;
-       } */
+
       .card-container .row .col-4:nth-child(6) h2 {
         margin-top: 2vw;
       }
       .card-container .row .col-4:nth-child(4) button {
         margin-top: 4vw;
       }
-      /* .row.g-3 .card:nth-child(1) .logo {
-         margin-top: 4.5vw;
-       } */
+
       .nav-container,
       .first-container p {
         margin-top: 2vh;
@@ -524,22 +508,110 @@
       button {
         font: normal normal 500 11pt Heebo;
       }
+      .footer .facebook p {
+        left: 20px;
+      }
+      .footer .location p {
+        left: 25px;
+      }
+      .footer .email p {
+        left: 15px;
+      }
+      .footer .simple-whatsapp p {
+        left: 15px;
+      }
+      .footer .linkedin p {
+        left: 0;
+      }
     }
     @media (max-width: 600px) {
       .card-container .row .col-4:nth-child(4) button {
         margin-top: 25vw;
       }
+      .first-container p {
+        margin-right: 16vw;
+      }
+      .first-container img {
+        width: 11vw;
+        height: 7vh;
+        margin-top: 0.5vh;
+      }
+      .form .all .main-form button {
+        width: 20vw;
+      }
+      .footer p {
+        font-size: 2.1vw;
+        font-weight: bold;
+      }
+      .footer .email p {
+        left: 20px;
+      }
+      .footer img {
+        width: 7vw;
+        height: 25px;
+      }
+      .form .all .main-form input {
+        margin-right: 14px;
+        width: 39vw;
+      }
+      .form .all .main-form .final-input {
+        width: 39vw;
+      }
+      .form .all p {
+        margin-right: 14px;
+      }
+      .form .all h1 {
+        margin-right: 14px;
+      }
+      .footer .facebook p {
+        left: 10px;
+      }
+      .footer .location p {
+        left: 25px;
+      }
+      .footer .email p {
+        left: 22px;
+      }
+      .footer .simple-whatsapp p {
+        left: 12px;
+      }
+      .footer .linkedin p {
+        left: 8px;
+      }
+      nav ul li {
+        font-size: 2.5vw;
+        margin-top: 1vh;
+      }
     }
   </style>
 
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const portfolioHeading = document.getElementById("portfolio-heading");
+        const text = "portfolio project ";
+
+        function typeText(index) {
+          if (index <= text.length) {
+            portfolioHeading.textContent = text.substring(0, index);
+            setTimeout(function () {
+              typeText(index + 1);
+            }, 75);
+          }
+        }
+
+        typeText(0);
+      });
+    </script>
     <div class="first-container">
       <img src="images/profilePicture.jpeg" />
       <p>Oran Meir</p>
       <div class="nav-container">
         <nav>
           <ul>
-            <li class="blue-item mr-1"><a href="portfolio.html">ראשי</a></li>
+            <li style="margin-right: 1rem" class="blue-item">
+              <a href="portfolio.html">ראשי</a>
+            </li>
             <li style="margin-right: 1rem">
               <a href="portfolio.html#about">אודות</a>
             </li>
@@ -554,12 +626,11 @@
       </div>
     </div>
     <div class="header-container">
-      <h1>תיק עבודות</h1>
-      <p>
-        תיק העבודת מציג בפניכם פרטים עלי, מגוון פרוייקטים עדכניים ביותר, כל
-        פרוייקט הוא הדגמה קטנה ליכולת לבצע פרוייקטים עתידיים מורכבים שיענו על כל
-        הדרישות , ולמטה דרכים ליצירת קשר
-      </p>
+      <h1>
+        <span id="portfolio-heading" style="font-family: Satisfy"
+          >תיק עבודות</span
+        >
+      </h1>
     </div>
     <div class="images-container">
       <div><img src="images/img-HTML.png" /></div>
@@ -573,12 +644,12 @@
       <div class="pargraph">
         <p dir="rtl">
           שמי אורן מאיר ואני מתמחה בבניית אתרים באמצעות שפות כמו HTML, CSS,
-          Bootstrap ו-Sass. העבודה במקצוע שאתה אוהב נחשבת בעיני לשליחות, ואני
-          מוצא תשוקה גדולה לנושא בניית האתרים. החלום שלי הוא לקחת חלק משמעותי
-          בחברה גדולה שעוסקת בנושא, ולשם כך אני מוכן להתמסר ללמוד ולהשקיע המון
-          זמן וכוחות. אחת התכונות שלי היא התמדה, אני לא אפסיק עד שהמטרה שאותה
-          הצבתי לעצמי תושג על הצד הטוב ביותר. תוך יחס מכבד לבני אדם בקבוצה בה
-          אני עובד. יחס מכבד ועבודה קשה הן התכונות שעל פיהם אני חי
+          Bootstrap, Sass ו-JS. העבודה במקצוע שאתה אוהב נחשבת בעיני לשליחות,
+          ואני מוצא תשוקה גדולה לנושא בניית האתרים. החלום שלי הוא לקחת חלק
+          משמעותי בחברה גדולה שעוסקת בנושא, ולשם כך אני מוכן להתמסר ללמוד
+          ולהשקיע המון זמן וכוחות. אחת התכונות שלי היא התמדה, אני לא אפסיק עד
+          שהמטרה שאותה הצבתי לעצמי תושג על הצד הטוב ביותר. תוך יחס מכבד לבני אדם
+          בקבוצה בה אני עובד. יחס מכבד ועבודה קשה הן התכונות שעל פיהם אני חי
         </p>
       </div>
       <button class="button-resume">
@@ -734,33 +805,45 @@
           </div>
           <div class="footer">
             <div class="location">
-              <img src="images/Icon material-location-on.png" />
-              <p style="margin-top: 12vh">שנקין 5 ת"א</p>
+              <img
+                style="margin-right: 3vw"
+                src="images/Icon material-location-on.png"
+              />
+              <p style="margin-top: 14vh; margin-right: 5vw">שנקין 5 ת"א</p>
             </div>
             <div class="email">
               <img
-                style="margin-right: 1.5vw"
+                style="margin-right: 5.5vw"
                 src="images/Icon simple-email.png"
               />
-              <p style="margin-top: 12vh; margin-right: 1vw">
+              <p style="margin-top: 14vh; margin-right: 4vw">
                 oranmeir1@gmail.com
               </p>
             </div>
             <div class="whatsapp">
-              <img src="images/Icon simple-whatsapp3.svg" />
-              <p style="margin-top: 12vh">+972506468605</p>
+              <img
+                style="margin-right: 4vw"
+                src="images/Icon simple-whatsapp3.svg"
+              />
+              <p style="margin-top: 14vh; margin-right: 3vw">+972506468605</p>
             </div>
             <div class="simple-whatsapp">
-              <img src="images/Icon simple-whatsapp.png" />
-              <p style="margin-top: 12vh">0506468605</p>
+              <img
+                style="margin-right: 1vw"
+                src="images/Icon simple-whatsapp.png"
+              />
+              <p style="margin-top: 14vh; margin-right: 2vw">0506468605</p>
             </div>
             <div class="linkedin">
               <img src="images/Icon awesome-linkedin-in.png" />
-              <p style="margin-top: 12vh">Oran Meir</p>
+              <p style="margin-top: 14vh">Oran Meir</p>
             </div>
             <div class="facebook">
-              <img src="images/Icon awesome-facebook-f.png" />
-              <p style="margin-top: 12vh">Oran Meir</p>
+              <img
+                style="margin-right: 2vw"
+                src="images/Icon awesome-facebook-f.png"
+              />
+              <p style="margin-top: 14vh; margin-right: 3vw">Oran Meir</p>
             </div>
           </div>
         </div>

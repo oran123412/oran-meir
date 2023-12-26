@@ -1,4 +1,3 @@
-// incase export default
 import Action from "./classes/Action.js";
 import ActionsManager from "./classes/ActionsManager.js";
 
@@ -11,23 +10,17 @@ body.style.backgroundRepeat = "no-repeat";
 body.style.backgroundAttachment = "fixed";
 body.style.backgroundPosition = "center center";
 
-// incase several exports
-// import { Action } from "./classes/Action.js";
-
-// פונקציה שמוגדרת בתוך מודול ונקראת ע"י קוד הטמל צריכה להיות מקושרת לווינדוו
 window.addActionToManager = function () {
   // get data from form
   let type = document.getElementById("type").value;
   let description = document.getElementById("description").value;
   let amount = +document.getElementById("amount").value;
 
-  // create the action object
   let action = new Action(type, description, amount);
 
-  // add the action to actionsManager
   manager.addAction(action);
   showActionsInTable();
-  // reset the form
+
   document.getElementById("description").value = "";
   document.getElementById("amount").value = "";
 };

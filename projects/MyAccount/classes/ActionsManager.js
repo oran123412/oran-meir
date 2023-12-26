@@ -8,21 +8,19 @@ export default class ActionsManager {
     this.calcBalance();
   }
   deleteAction(actionId) {
-    // find the relevent index
     let indexToDelete = this.actions.findIndex(
       (action) => action.id == actionId
     );
-    // delete with splice
+
     this.actions.splice(indexToDelete, 1);
     this.calcBalance();
   }
 
   updateAction(actionId, newAmount) {
-    // find the relevent index
     let indexToUpdate = this.actions.findIndex(
       (action) => action.id == actionId
     );
-    // update in the array
+
     this.actions[indexToUpdate].amount =
       this.actions[indexToUpdate].type == "income" ? newAmount : -newAmount;
     this.calcBalance();
