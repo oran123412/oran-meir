@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+
+      h2 {
+        color: green;
+        font-size: 50px;
+        text-align: center;
+      }
+
+      canvas {
+        border: 2px solid #000;
+        display: block;
+        margin: auto;
+        background-color: black;
+      }
+
+      .game-info {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Snake Game!</h2>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <div class="game-info">
+      <div>Points: <span id="points">0</span></div>
+    </div>
+    <img id="mouseImage" src="./images/mouse.png" style="display: none" />
+    <script src="snake.js" defer></script>
+  </body>
+</html>
